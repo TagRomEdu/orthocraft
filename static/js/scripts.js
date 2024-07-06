@@ -1,3 +1,22 @@
+function scrollLight() {
+    document.getElementById('product-row').scrollBy({
+        left: -440,
+        behavior: 'smooth'
+    });
+}
+
+function scrollRight() {
+    document.getElementById('product-row').scrollBy({
+        left: 440,
+        behavior: 'smooth'
+    });
+}
+
+function formatPrice(price) {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch('static/goods.json')
         .then(response => response.json())
@@ -16,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                         <div class="product-details p-3 text-center">
                             <h4 class="product-name">${product.name}</h4>
-                            <p class="product-price">Цена: ${product.price.toFixed(2)} руб.</p>
+                            <p class="product-price">Цена: ${formatPrice(product.price.toFixed(2))} руб.</p>
                         </div>
                     </div>
                 `;
@@ -34,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="productModalLabel${product.id}">${product.name}</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close btn-close-blue" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body text-start">
                                 <div class="row">
@@ -42,14 +61,16 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <img src="${product.image}" alt="logo" class="img-fluid">
                                     </div>
                                     <div class="col-md-6">
-                                        <p><strong>Цена:</strong> ${product.price.toFixed(2)} руб.</p>
+                                        <p><strong>Цена:</strong> ${formatPrice(product.price.toFixed(2))} руб.</p>
                                         <p><strong>Описание:</strong> ${product.description}</p>
+                                        <p>Комплектация индивидуальная</p>
+                                        <p><strong>Гарантия:></strong>6 месяцев</p>
                                         <!-- Добавьте другие детали продукта по вашему усмотрению -->
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                <button type="button" class="btn btn-info text-white" data-bs-dismiss="modal">Закрыть</button>
                             </div>
                         </div>
                     </div>
@@ -61,21 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Ошибка при загрузке данных:', error);
         });
 });
-
-
-function scrollLight() {
-    document.getElementById('product-row').scrollBy({
-        left: -440,
-        behavior: 'smooth'
-    });
-}
-
-function scrollRight() {
-    document.getElementById('product-row').scrollBy({
-        left: 440,
-        behavior: 'smooth'
-    });
-}
 
 
 const navbar = document.querySelector('.navbar');
