@@ -10,30 +10,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 const productCard = document.createElement('div');
                 productCard.className = 'col-md-4 mb-4';
                 productCard.innerHTML = `
-                    <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal${index + 1}">
+                    <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal${product.id}">
                         <div class="product-image">
                             <img src="${product.image}" alt="${product.name}" class="img-fluid">
                         </div>
                         <div class="product-details p-3 text-center">
                             <h4 class="product-name">${product.name}</h4>
-                            <p class="product-price">Цена: ${product.price} руб.</p>
+                            <p class="product-price">Цена: ${product.price.toFixed(2)} руб.</p>
                         </div>
                     </div>
                 `;
                 productRow.appendChild(productCard);
 
                 // Создание модального окна для продукта
-                const productModal = document.createElement('div');
-                productModal.className = 'modal fade';
-                productModal.id = `productModal${index + 1}`;
-                productModal.tabIndex = -1;
-                productModal.setAttribute('aria-labelledby', `productModalLabel${index + 1}`);
-                productModal.setAttribute('aria-hidden', 'true');
-                productModal.innerHTML = `
+                const modal = document.createElement('div');
+                modal.className = 'modal fade';
+                modal.id = `productModal${product.id}`;
+                modal.tabIndex = '-1';
+                modal.setAttribute('aria-labelledby', `productModalLabel${product.id}`);
+                modal.setAttribute('aria-hidden', 'true');
+                modal.innerHTML = `
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="productModalLabel${index + 1}">${product.name}</h5>
+                                <h5 class="modal-title" id="productModalLabel${product.id}">${product.name}</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body text-start">
@@ -42,8 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <img src="${product.image}" alt="${product.name}" class="img-fluid">
                                     </div>
                                     <div class="col-md-6">
-                                        <p><strong>Цена:</strong> ${product.price} руб.</p>
-                                        <p><strong>Описание:</strong> ${product.description !== 'nan' ? product.description : 'Материалы слишком ценны, чтобы их показывать всем подряд'}</p>
+                                        <p><strong>Цена:</strong> ${product.price.toFixed(2)} руб.</p>
+                                        <p><strong>Описание:</strong> ${product.description}</p>
+                                        <!-- Добавьте другие детали продукта по вашему усмотрению -->
                                     </div>
                                 </div>
                             </div>
@@ -53,7 +54,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
                 `;
-                modalsContainer.appendChild(productModal);
+                modalsContainer.appendChild(modal);
             });
+        })
+        .catch(error => {
+            console.error('Ошибка при загрузке данных:', error);
         });
 });
