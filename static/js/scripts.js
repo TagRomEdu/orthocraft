@@ -97,3 +97,8 @@ navbar.addEventListener('mouseleave', () => {
         navbar.style.transform = 'translateY(-100%)';
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+});
