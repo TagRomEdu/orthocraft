@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 productCard.innerHTML = `
                     <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal${product.id}">
                         <div class="product-image">
-                            <img src="orthocraft/static/images/logo2.jpg" alt="logo" class="img-fluid">
+                            <img src="/static/images/logo2.jpg" alt="logo" class="img-fluid">
                         </div>
                         <div class="product-details p-3 text-center">
                             <h4 class="product-name">${product.name}</h4>
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="modal-body text-start">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <img src="${product.image}" alt="/static/images/logo2.jpg" class="img-fluid">
+                                        <img src="$/static/images/logo2.jpg" alt="logo" class="img-fluid">
                                     </div>
                                     <div class="col-md-6">
                                         <p><strong>Цена:</strong> ${product.price.toFixed(2)} руб.</p>
