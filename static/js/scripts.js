@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 productCard.innerHTML = `
                     <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal${product.id}">
                         <div class="product-image">
-                            <img src="${product.image}" alt="static/images/ort1.jpg" class="img-fluid">
+                            <img src="/static/images/logo2.jpg" alt="logo" class="img-fluid">
                         </div>
                         <div class="product-details p-3 text-center">
                             <h4 class="product-name">${product.name}</h4>
