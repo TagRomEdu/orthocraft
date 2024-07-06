@@ -389,3 +389,7 @@ h1 u {
 .delivery-option i {
     color: #6c757d !important; /* Цвет иконок */
 }
+
+.text-info {
+    color: #17a2b8 !important;
+}
