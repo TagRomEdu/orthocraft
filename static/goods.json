@@ -18,7 +18,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.953915+05:00",
-        "updated_at": "2024-07-01T12:19:08.953925+05:00"
+        "updated_at": "2024-07-01T12:19:08.953925+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 3,
@@ -28,7 +29,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.954835+05:00",
-        "updated_at": "2024-07-01T12:19:08.954844+05:00"
+        "updated_at": "2024-07-01T12:19:08.954844+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 4,
@@ -38,7 +40,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.955842+05:00",
-        "updated_at": "2024-07-01T12:19:08.955851+05:00"
+        "updated_at": "2024-07-01T12:19:08.955851+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 5,
@@ -48,7 +51,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.956747+05:00",
-        "updated_at": "2024-07-01T12:19:08.956756+05:00"
+        "updated_at": "2024-07-01T12:19:08.956756+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 6,
@@ -58,7 +62,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.957647+05:00",
-        "updated_at": "2024-07-01T12:19:08.957656+05:00"
+        "updated_at": "2024-07-01T12:19:08.957656+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 7,
@@ -68,7 +73,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.95851+05:00",
-        "updated_at": "2024-07-01T12:19:08.958518+05:00"
+        "updated_at": "2024-07-01T12:19:08.958518+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 8,
@@ -78,7 +84,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.959434+05:00",
-        "updated_at": "2024-07-01T12:19:08.959442+05:00"
+        "updated_at": "2024-07-01T12:19:08.959442+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 9,
@@ -88,7 +95,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.960356+05:00",
-        "updated_at": "2024-07-01T12:19:08.960364+05:00"
+        "updated_at": "2024-07-01T12:19:08.960364+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 10,
@@ -98,7 +106,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.961264+05:00",
-        "updated_at": "2024-07-01T12:19:08.961272+05:00"
+        "updated_at": "2024-07-01T12:19:08.961272+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 11,
@@ -108,7 +117,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.962141+05:00",
-        "updated_at": "2024-07-01T12:19:08.962149+05:00"
+        "updated_at": "2024-07-01T12:19:08.962149+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 12,
@@ -118,7 +128,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.963027+05:00",
-        "updated_at": "2024-07-01T12:19:08.963035+05:00"
+        "updated_at": "2024-07-01T12:19:08.963035+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 13,
@@ -128,7 +139,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.9645+05:00",
-        "updated_at": "2024-07-01T12:19:08.964516+05:00"
+        "updated_at": "2024-07-01T12:19:08.964516+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 14,
@@ -138,7 +150,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.966366+05:00",
-        "updated_at": "2024-07-01T12:19:08.966383+05:00"
+        "updated_at": "2024-07-01T12:19:08.966383+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 15,
@@ -148,7 +161,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.969219+05:00",
-        "updated_at": "2024-07-01T12:19:08.969232+05:00"
+        "updated_at": "2024-07-01T12:19:08.969232+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 16,
@@ -158,7 +172,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.970488+05:00",
-        "updated_at": "2024-07-01T12:19:08.970499+05:00"
+        "updated_at": "2024-07-01T12:19:08.970499+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 17,
@@ -168,7 +183,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.971495+05:00",
-        "updated_at": "2024-07-01T12:19:08.971504+05:00"
+        "updated_at": "2024-07-01T12:19:08.971504+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 18,
@@ -178,7 +194,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.972399+05:00",
-        "updated_at": "2024-07-01T12:19:08.972407+05:00"
+        "updated_at": "2024-07-01T12:19:08.972407+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 19,
@@ -188,7 +205,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.973255+05:00",
-        "updated_at": "2024-07-01T12:19:08.973263+05:00"
+        "updated_at": "2024-07-01T12:19:08.973263+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 20,
@@ -198,7 +216,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.974107+05:00",
-        "updated_at": "2024-07-01T12:19:08.974116+05:00"
+        "updated_at": "2024-07-01T12:19:08.974116+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 21,
@@ -208,7 +227,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.97521+05:00",
-        "updated_at": "2024-07-01T12:19:08.975222+05:00"
+        "updated_at": "2024-07-01T12:19:08.975222+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 22,
@@ -218,7 +238,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.976324+05:00",
-        "updated_at": "2024-07-01T12:19:08.976335+05:00"
+        "updated_at": "2024-07-01T12:19:08.976335+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 23,
@@ -228,7 +249,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.977217+05:00",
-        "updated_at": "2024-07-01T12:19:08.977226+05:00"
+        "updated_at": "2024-07-01T12:19:08.977226+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 24,
@@ -238,7 +260,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.978263+05:00",
-        "updated_at": "2024-07-01T12:19:08.978273+05:00"
+        "updated_at": "2024-07-01T12:19:08.978273+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 25,
@@ -248,7 +271,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.979295+05:00",
-        "updated_at": "2024-07-01T12:19:08.979306+05:00"
+        "updated_at": "2024-07-01T12:19:08.979306+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 26,
@@ -258,7 +282,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.98045+05:00",
-        "updated_at": "2024-07-01T12:19:08.980462+05:00"
+        "updated_at": "2024-07-01T12:19:08.980462+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 27,
@@ -268,7 +293,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.981787+05:00",
-        "updated_at": "2024-07-01T12:19:08.981799+05:00"
+        "updated_at": "2024-07-01T12:19:08.981799+05:00",
+        "image": "static/images/logo2.jpg"
     }, 
     {
         "id": 28,
@@ -278,7 +304,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.982865+05:00",
-        "updated_at": "2024-07-01T12:19:08.982875+05:00"
+        "updated_at": "2024-07-01T12:19:08.982875+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 29,
@@ -288,7 +315,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.984447+05:00",
-        "updated_at": "2024-07-01T12:19:08.984457+05:00"
+        "updated_at": "2024-07-01T12:19:08.984457+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 30,
@@ -298,7 +326,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.98545+05:00",
-        "updated_at": "2024-07-01T12:19:08.98546+05:00"
+        "updated_at": "2024-07-01T12:19:08.98546+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 31,
@@ -308,7 +337,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.986369+05:00",
-        "updated_at": "2024-07-01T12:19:08.986386+05:00"
+        "updated_at": "2024-07-01T12:19:08.986386+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 32,
@@ -318,7 +348,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.987461+05:00",
-        "updated_at": "2024-07-01T12:19:08.987471+05:00"
+        "updated_at": "2024-07-01T12:19:08.987471+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 33,
@@ -328,7 +359,8 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.988419+05:00",
-        "updated_at": "2024-07-01T12:19:08.988427+05:00"
+        "updated_at": "2024-07-01T12:19:08.988427+05:00",
+        "image": "static/images/logo2.jpg"
     },
     {
         "id": 34,
@@ -338,6 +370,7 @@
         "quantity": null,
         "category": null,
         "created_at": "2024-07-01T12:19:08.989237+05:00",
-        "updated_at": "2024-07-01T12:19:08.989246+05:00"
+        "updated_at": "2024-07-01T12:19:08.989246+05:00",
+        "image": "static/images/logo2.jpg"
     }
 ]
