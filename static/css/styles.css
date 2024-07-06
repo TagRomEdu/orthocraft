@@ -387,5 +387,5 @@ h1 u {
 }
 
 .delivery-option i {
-    color: #6c757d; /* Цвет иконок */
+    color: #6c757d !important; /* Цвет иконок */
 }
