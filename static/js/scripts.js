@@ -62,9 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                     </div>
                                     <div class="col-md-6">
                                         <p><strong>Цена:</strong> ${formatPrice(product.price.toFixed(2))} руб.</p>
-                                        <p><strong>Описание:</strong> ${product.description}</p>
-                                        <p>Комплектация индивидуальная</p>
-                                        <p><strong>Гарантия:></strong>6 месяцев</p>
+                                        <p><strong>Описание:</strong></p>
+                                        <p>${product.description}. Комплектация индивидуальная</p>
+                                        <p><strong>Гарантия:</strong>6 месяцев</p>
                                         <!-- Добавьте другие детали продукта по вашему усмотрению -->
                                     </div>
                                 </div>

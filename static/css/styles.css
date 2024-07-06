@@ -376,3 +376,20 @@ h1 u {
     height: auto;
     display: block;
 }
+
+#delivery h2 {
+    color: #17a2b8; /* Цвет заголовка */
+}
+
+.delivery-option {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delivery-option:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.delivery-option i {
+    color: #17a2b8; /* Цвет иконок */
+}
