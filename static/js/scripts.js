@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="modal-body text-start">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <img src="$/static/images/logo2.jpg" alt="logo" class="img-fluid">
+                                        <img src="/static/images/logo2.jpg" alt="logo" class="img-fluid">
                                     </div>
                                     <div class="col-md-6">
                                         <p><strong>Цена:</strong> ${product.price.toFixed(2)} руб.</p>
