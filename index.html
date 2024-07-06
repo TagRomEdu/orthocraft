@@ -1,0 +1,422 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orthocraft - Ортопедическое ремесло</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <h1 class="navbar-brand" style="color:#17a2b8; font-size: 3em;"><u>orthocraft</u></h1>
+                <h4 class="navbar-text text-white ">ортопедическое ремесло</h4>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#products">Товары</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#payment-return">Оплата и возврат</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#delivery">Доставка</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="about" class="bg-light py-5">
+        <div class="container" style="padding-top: 50px;">
+            <h2 class="mb-4 text-center">О нас</h2>
+            <!-- Изображение в самом верху -->
+            <div class="text-center mb-5">
+                <img src="{% static 'images/ort1.jpg' %}" class="img-fluid rounded-top" alt="О нас">
+            </div>
+    
+            <div class="row">
+                <!-- Дополнительное изображение -->
+                <div class="col-md-4 text-center">
+                    <img src="{% static 'images/6911128.jpg' %}" class="img-fluid rounded" alt="Дополнительное изображение">
+                </div>
+            
+                <!-- Статья об ортопедическом мастерстве -->
+                <div class="col-md-8">
+                    <div class="article-container bg-dark text-white p-4 rounded shadow-hover text-justify">
+                        <h3 class="text-white mb-4">Об ортопедическом мастерстве</h3>
+                        <p>
+                            Ортопедическое мастерство — это направление медицины, которое занимается созданием и изготовлением ортопедических изделий, таких как протезы, ортезы и другие аппараты для восстановления функций опорно-двигательного аппарата человека.
+                        </p>
+                        <p>
+                            Ортопедические изделия помогают людям с различными ограничениями в движении восстановить мобильность, улучшить качество жизни и восстановить потерянные функции.
+                        </p>
+                        <p>
+                            Ортопедия — это не только наука о восстановлении функций опорно-двигательного аппарата, но и ключевое направление, которое способствует значительному улучшению качества жизни людей. В современном мире ортопедические технологии и изделия играют важную роль, помогая людям преодолевать физические ограничения, возникающие в результате травм, заболеваний или возрастных изменений.
+                        </p>
+                        <p>
+                            Создание качественных ортопедических протезов, ортезов и других устройств не только помогает восстановить потерянные функции, но и повышает самооценку и уверенность в себе у людей, которые сталкиваются с физическими вызовами. Это способствует инклюзивности и социальной адаптации, делая общество более дружелюбным и заботливым.
+                        </p>
+                        <p>
+                            Наша компания специализируется на изготовлении качественных ортопедических изделий, предлагая клиентам индивидуальный подход и современные технологии.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="products" class="container my-5">
+        <h2 class="mb-4 text-center">Наши Товары</h2>
+        <div class="position-relative">
+            <button class="btn btn-secondary scroll-button left-button" onclick="scrollLight()">‹</button>
+            <div class="row flex-row flex-nowrap overflow-auto" id="product-row">
+                {% for product in products %}
+                    <div class="col-md-4 mb-4">
+                        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal{{ forloop.counter }}">
+                            <div class="product-image">
+                                <img src="{% static 'images/logo2.jpg' %}" alt="{{ product.name }}" class="img-fluid">
+                            </div>
+                            <div class="product-details p-3 text-center">
+                                <h4 class="product-name">{{ product.name }}</h4>
+                                <p class="product-price">Цена: {{ product.price }} руб.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Модальное окно для товара -->
+                    <div class="modal fade" id="productModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="productModalLabel{{ forloop.counter }}" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="productModalLabel{{ forloop.counter }}">{{ product.name }}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-start">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="{% static 'images/logo2.jpg' %}" alt="{{ product.name }}" class="img-fluid">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p><strong>Цена:</strong> {{ product.price }} руб.</p>
+                                            {% if product.description != 'nan' %}
+                                            <p><strong>Описание:</strong> {{ product.description }}</p>
+                                            {% else %}
+                                            <p><strong>Описание:</strong> Материалы слишком ценны, чтобы их показывать всем подряд</p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <button class="btn btn-secondary scroll-button right-button" onclick="scrollRight()">›</button>
+        </div>
+    </section>
+
+    <section id="payment-return" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Оплата и возврат товара</h2>
+    
+            <div class="row">
+                <!-- Левая часть (оплата) -->
+                <div class="col-md-6">
+                    <div class="payment-container bg-secondary p-4 rounded shadow">
+                        <div class="row mb-4">
+                            <div class="col">
+                                <div class="card bg-white text-dark p-4 rounded shadow mx-auto" style="width: 21rem;">
+                                    <h4 class="card-title">Правила оплаты</h4>
+                                    <p class="card-text">К оплате принимаются платежные карты:
+                                        <img src="{% static 'images/cards.png' %}" alt="МИР, СБП, Visa, MasterCard, PayKeeper" class="img-fluid p-2">
+                                    </p>
+                                    <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#paymentRulesModal">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Модальное окно для Правил оплаты -->
+                        <div class="modal fade" id="paymentRulesModal" tabindex="-1" aria-labelledby="paymentRulesModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-dark" id="paymentRulesModalLabel">Правила оплаты</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-dark">
+                                        <p>К оплате принимаются платежные карты: VISA Inc, MasterCard WorldWide, МИР.</p>
+                                        <p>Для оплаты товара банковской картой при оформлении заказа в интернет-магазине выберите способ оплаты: банковской картой. При оплате заказа банковской картой, обработка платежа происходит на авторизационной странице банка, где Вам необходимо ввести данные Вашей банковской карты:</p>
+                                        <ul>
+                                            <li>тип карты</li>
+                                            <li>номер карты</li>
+                                            <li>срок действия карты (указан на лицевой стороне карты)</li>
+                                            <li>Имя держателя карты (латинскими буквами, точно также как указано на карте)</li>
+                                            <li>CVC2/CVV2 код</li>
+                                        </ul>
+                                        <img src="{% static 'images/card_info.png' %}" alt="Изображение" class="img-fluid mt-3">
+                                        <p></p>
+                                        <p>Если Ваша карта подключена к услуге 3D-Secure, Вы будете автоматически переадресованы на страницу банка, выпустившего карту, для прохождения процедуры аутентификации. Информацию о правилах и методах дополнительной идентификации уточняйте в Банке, выдавшем Вам банковскую карту.</p>
+                                        <p>Безопасность обработки интернет-платежей через платежный шлюз банка гарантирована международным сертификатом безопасности PCI DSS. Передача информации происходит с применением технологии шифрования TLS. Эта информация недоступна посторонним лицам.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="card bg-white text-dark p-4 rounded shadow mx-auto" style="width: 21rem;">
+                                    <h4 class="card-title">Советы по безопасности</h4>
+                                    <p class="card-text">Советы и рекомендации по безопасности проведения платежей с использованием банковской карты.</p>
+                                    <p></p>
+                                    <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#securityTipsModal">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Модальное окно для Советов по безопасности -->
+                        <div class="modal fade" id="securityTipsModal" tabindex="-1" aria-labelledby="securityTipsModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-dark" id="securityTipsModalLabel">Советы по безопасности</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-dark">
+                                        <ul>
+                                            <li>Берегите свои пластиковые карты так же, как бережете наличные деньги. Не забывайте их в машине, ресторане, магазине и т.д.</li>
+                                            <li>Никогда не передавайте полный номер своей кредитной карты по телефону каким-либо лицам или компаниям.</li>
+                                            <li>Всегда имейте под рукой номер телефона для экстренной связи с банком, выпустившим вашу карту, и в случае ее утраты немедленно свяжитесь с банком.</li>
+                                            <li>Вводите реквизиты карты только при совершении покупки. Никогда не указывайте их по каким-то другим причинам.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Правая часть (возврат) -->
+                <div class="col-md-6">
+                    <div class="return-container bg-light p-4 rounded shadow">
+                        <div class="row mb-4">
+                            <div class="col">
+                                <div class="card p-4 rounded shadow mx-auto" style="width: 21rem;">
+                                    <h4 class="card-title">Возврат товара</h4>
+                                    <p class="card-text">Процедура возврата товара регламентируется статьей 26.1 федерального закона «О защите прав потребителей».</p>
+                                    <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#returnModal">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Модальное окно возврата -->
+                        <div class="modal fade" id="returnModal" tabindex="-1" aria-labelledby="returnModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content bg-light">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-dark" id="returnModalLabel">Правила возврата товара</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Процедура возврата товара регламентируется статьей 26.1 федерального закона «О защите прав потребителей».</p>
+                                        <ul>
+                                            <li>Потребитель вправе отказаться от товара в любое время до его передачи, а после передачи товара - в течение семи дней;</li>
+                                            <li>Возврат товара надлежащего качества возможен в случае, если сохранены его товарный вид, потребительские свойства, а также документ, подтверждающий факт и условия покупки указанного товара;</li>
+                                            <li>Потребитель не вправе отказаться от товара надлежащего качества, имеющего индивидуально-определенные свойства, если указанный товар может быть использован исключительно приобретающим его человеком;</li>
+                                            <li>При отказе потребителя от товара продавец должен возвратить ему денежную сумму, уплаченную потребителем по договору, за исключением расходов продавца на доставку от потребителя возвращенного товара, не позднее чем через десять дней со дня предъявления потребителем соответствующего требования;</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="card p-4 rounded shadow mx-auto" style="width: 21rem;">
+                                    <h4 class="card-title">Отказ от услуги</h4>
+                                    <p class="card-text">Право потребителя на расторжение договора регламентируется статьей 32 федерального закона «О защите прав потребителей».</p>
+                                    <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#serviceRefusalModal">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Модальное окно отказа -->
+                        <div class="modal fade" id="serviceRefusalModal" tabindex="-1" aria-labelledby="serviceRefusalModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content bg-light">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-dark" id="serviceRefusalModalLabel">Правила отказа от услуги</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="card-text">Право потребителя на расторжение договора об оказании услуги регламентируется статьей 32 федерального закона «О защите прав потребителей».</p>
+                                        <ul>
+                                            <li>Потребитель вправе расторгнуть договор об оказании услуги в любое время, уплатив исполнителю часть цены пропорционально части оказанной услуги до получения извещения о расторжении указанного договора и возместив исполнителю расходы, произведенные им до этого момента в целях исполнения договора, если они не входят в указанную часть цены услуги;</li>
+                                            <li>Потребитель при обнаружении недостатков оказанной услуги вправе по своему выбору потребовать безвозмездного устранения недостатков, соответствующего уменьшения цены или возмещения понесенных расходов;</li>
+                                            <li>Потребитель вправе предъявлять требования, связанные с недостатками оказанной услуги, если они обнаружены в течение гарантийного срока или в разумный срок, не превышающий двух лет со дня принятия оказанной услуги;</li>
+                                            <li>Исполнитель несет ответственность за недостатки услуги, на которую не установлен гарантийный срок, если потребитель докажет, что они возникли до ее принятия или по причинам, возникшим до этого момента.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="delivery" class="container my-5">
+        <h2>Доставка</h2>
+        <p>Доставка осуществляется по всей России. Срок доставки 3-5 дней...</p>
+    </section>
+
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Контактная информация -->
+                <div class="col-md-6">
+                    <h2>Контакты</h2>
+                    <p>Телефон: +7 (904) 495-10-53</p>
+                    <p>Email: orthocraft@mail.ru</p>
+                </div>
+    
+                <!-- Юридическая информация -->
+                <div class="col-md-6">
+                    <h2>Юридическая информация</h2>
+                    <p class="legal-info-link" data-bs-toggle="modal" data-bs-target="#legalInfoModal">Наименование организации: ИП Вольский Г. Б.</p>
+                    <p>Юридический адрес: 625048, г. Тюмень, ул. Холодильная д. 56.кв. 1</p>
+                    <button type="button" class="btn btn-info custom-btn text-white" data-bs-toggle="modal" data-bs-target="#legalInfoModal">
+                        Узнать подробную информацию
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Модальное окно для юридической информации -->
+        <div class="modal fade" id="legalInfoModal" tabindex="-1" aria-labelledby="legalInfoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="legalInfoModalLabel">Юридическая информация</h5>
+                        <button type="button" class="btn-close btn-close-blue" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>Наименование организации</td>
+                                    <td>ИП Вольский Г. Б.</td>
+                                </tr>
+                                <tr>
+                                    <td>Юридический адрес</td>
+                                    <td>625048, г. Тюмень, ул. Холодильная д. 56.кв. 1</td>
+                                </tr>
+                                <tr>
+                                    <td>ИНН</td>
+                                    <td>720317332215</td>
+                                </tr>
+                                <tr>
+                                    <td>ОГРНИП</td>
+                                    <td>319723200006191</td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                                <tr>
+                                    <td>Строка 5</td>
+                                    <td>Описание 5</td>
+                                </tr>
+                                <tr>
+                                    <td>Строка 6</td>
+                                    <td>Описание 6</td>
+                                </tr>
+                                <tr>
+                                    <td>Строка 7</td>
+                                    <td>Описание 7</td>
+                                </tr>
+                                <tr>
+                                    <td>Строка 8</td>
+                                    <td>Описание 8</td>
+                                </tr>
+                                <tr>
+                                    <td>Строка 9</td>
+                                    <td>Описание 9</td>
+                                </tr>
+                                <tr>
+                                    <td>Строка 10</td>
+                                    <td>Описание 10</td>
+                                </tr>
+                                <tr>
+                                    <td>Строка 11</td>
+                                    <td>Описание 11</td>
+                                </tr>
+                                <tr>
+                                    <td>Строка 12</td>
+                                    <td>Описание 12</td>
+                                </tr>
+                                <tr>
+                                    <td>Строка 13</td>
+                                    <td>Описание 13</td>
+                                </tr>
+                                <tr>
+                                    <td>Строка 14</td>
+                                    <td>Описание 14</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info text-white" data-bs-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-dark text-white text-center py-4">
+        <div class="container">
+            <div class="footer-logos mb-3">
+                <img src="{% static 'images/logo2.jpg' %}" alt="Логотип" class="footer-logo">
+            </div>
+            <p>ИП Вольский Г. Б. | Все права защищены.</p>
+            <div class="footer-corner-image">
+                <img src="{% static 'images/cards.png' %}" alt="Платежные системы" class="corner-image">
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+header.bg-dark {
+    background-color: #6c757d !important; /* серый фон */
+    color: #ffffff; /* белый текст */
+    padding: 1rem; /* отступы внутри хедера */
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для навигационной панели */
+.navbar {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+/* Выравниваем список по правому краю */
+.navbar-nav {
+    margin-left: auto;
+    text-align: right;
+    width: auto;
+}
+
+.navbar-nav .nav-item {
+    flex: 1;
+}
+
+.nav-item .nav-link {
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.container {
+    text-align: center; /* Центрируем содержимое внутри контейнера */
+}
+/* Стили для h1 */
+h1 {
+    color: #17a2b8; /* Основной цвет текста */
+}
+
+/* Стили для подчеркивания */
+h1 u {
+    text-decoration: none; /* Удалить стандартное подчеркивание */
+    border-bottom: 3px solid white; /* Тонкая толщина и стиль линии */
+    padding-bottom: 1px; /* Отступ под линией */
+    display: inline; /* Для правильного отображения отступа и толщины линии */
+}
+
+/* Дополнительные стили для хедера */
+.custom-header {
+    width: 100vw; /* Используем полную ширину окна */
+    left: 50%;
+    transform: translateX(-50%); /* Центрируем хедер относительно окна */
+}
+
+.card {
+    border-radius: 15px; /* Радиус скругления */
+    overflow: hidden; /* Убираем возможные выходы контента за пределы скругленных углов */
+    margin-bottom: 20px; /* Отступ между карточками */
+    min-height: 250px; /* Максимальная высота карточки */
+    overflow: hidden; /* Скрыть содержимое, выходящее за пределы */
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+}
+
+.product-details {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.product-name {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: #17a2b8;
+    font-weight: bold;
+}
+
+.row::-webkit-scrollbar {
+    height: 10px;
+}
+
+.row::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.row::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.row::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    opacity: 0.7;
+}
+
+.left-button {
+    left: 0;
+}
+
+.right-button {
+    right: 0;
+}
+
+/* Стили для футера */
+.footer {
+    background-color: #6c757d !important;
+    color: #fff;
+    padding: 40px 0;
+    position: relative; /* Относительное позиционирование для контейнера футера */
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    max-height: 100px; /* Ограничиваем максимальную высоту логотипа */
+    margin: 0 20px; /* Отступы между логотипами */
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-corner-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.corner-image {
+    width: 500px; /* Установите ширину в зависимости от ваших требований */
+    height: auto; /* Сохраняет соотношение сторон */
+}
+
+.modal-body p {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.modal-body ul {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.modal-body li {
+    padding-bottom: 10px;
+}
+
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+}
+
+/* Кнопка закрытия в модальном окне */
+.btn-close-blue {
+    background-color: #17a2b8; /* Темно-серый цвет для кнопки закрытия */
+    border-radius: 5px; /* Закругленные углы */
+    width: 1rem;
+    height: 1rem;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none; /* Убираем границу */
+    font-size: 1rem; /* Размер шрифта для креста */
+}
+
+.btn-close-blue:hover {
+    background-color: #138496; /* Более темный голубой цвет при наведении */
+}
+
+/* Стили для модального окна */
+.modal-content {
+    background-color: #ffffff; /* Белый фон */
+    color: #000000; /* Черный текст */
+}
+
+/* Стили для кнопок в модальном окне */
+.modal-footer .btn-info {
+    background-color: #17a2b8; /* Голубой цвет */
+    border-color: #17a2b8; /* Голубая рамка */
+}
+
+.modal-footer .btn-info:hover {
+    background-color: #138496; /* Темно-голубой цвет при наведении */
+    border-color: #138496; /* Темно-голубая рамка при наведении */
+}
+
+/* Стили для таблицы в модальном окне */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9; /* Светло-серый фон для нечетных строк */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #ffffff; /* Белый фон для четных строк */
+}
+
+.article-container {
+    background-color: #6c757d !important; /* серый фон */
+    color: #ffffff; /* белый текст */
+    padding: 2rem; /* отступы внутри карточки */
+    border-radius: 10px; /* закругленные углы */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* явная тень */
+    transition: box-shadow 0.3s ease-in-out; /* плавное изменение тени */
+}
+
+.article-container:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* увеличенная тень при наведении */
+    transform: translateY(-5px); /* эффект парения */
+}
+
+.article-container h3 {
+    color: #17a2b8; /* голубой цвет для заголовка */
+    text-align: left; /* выравнивание заголовка по левому краю */
+}
+
+.article-container p {
+    font-size: 18px; /* крупный текст */
+    text-align: justify; /* выравнивание текста по ширине */
+}
+
+.text-center {
+    text-align: center; /* выравнивание текста по центру */
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* обрезка изображения */
+}
+
+.rounded-top {
+    border-radius: 10px; /* закругление верхних углов изображения */
+    width: 100%; /* ширина изображения по всей ширине родительского блока */
+    height: 400px; /* задаем высоту изображения */
+    object-fit: cover; /* обрезаем изображение, сохраняя пропорции */
+}
+
+/* Стили для контейнера с оплатой (левая часть) */
+.payment-container {
+    background-color: #6c757d; /* Серый фон */
+    color: #ffffff; /* Белый текст */
+}
+
+/* Стили для карточек с оплатой */
+.payment-container .card {
+    background-color: #ffffff; /* Белый фон */
+    color: #343a40; /* Темный текст */
+    margin-bottom: 1rem;
+}
+
+.payment-container .card-title {
+    color: #17a2b8; /* Цвет заголовка */
+}
+
+.payment-container .card-text {
+    color: #343a40; /* Цвет текста */
+}
+
+.payment-container button {
+    background-color: #17a2b8; /* Цвет фона кнопки */
+    border-color: #17a2b8; /* Цвет рамки кнопки */
+}
+
+.payment-container button:hover {
+    background-color: #138496; /* Цвет фона кнопки при наведении */
+    border-color: #138496; /* Цвет рамки кнопки при наведении */
+}
+
+/* Стили для контейнера с возвратом (правая часть) */
+.return-container {
+    background-color: #ffffff; /* Белый фон */
+    color: #343a40; /* Темный текст */
+}
+
+/* Стили для карточек с возвратом */
+.return-container .card {
+    background-color: #6c757d; /* Темный фон */
+    color: #ffffff; /* Белый текст */
+    margin-bottom: 1rem;
+}
+
+.return-container .card-title {
+    color: #17a2b8; /* Цвет заголовка */
+}
+
+.return-container button {
+    background-color: #17a2b8; /* Цвет фона кнопки */
+    border-color: #17a2b8; /* Цвет рамки кнопки */
+}
+
+.return-container button:hover {
+    background-color: #138496; /* Цвет фона кнопки при наведении */
+    border-color: #138496; /* Цвет рамки кнопки при наведении */
+}
+
+/* Стили для кнопки */
+.custom-btn {
+    background-color: #17a2b8; /* Голубой цвет, как в общем шаблоне */
+    border-color: #17a2b8;
+}
+
+.custom-btn:hover {
+    background-color: #138496; /* Темнее наводка */
+    border-color: #138496;
+}
