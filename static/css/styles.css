@@ -377,10 +377,6 @@ h1 u {
     display: block;
 }
 
-#delivery h2 {
-    color: #17a2b8; /* Цвет заголовка */
-}
-
 .delivery-option {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -391,5 +387,5 @@ h1 u {
 }
 
 .delivery-option i {
-    color: #17a2b8; /* Цвет иконок */
+    color: #6c757d; /* Цвет иконок */
 }
