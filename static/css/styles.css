@@ -176,6 +176,11 @@ h1 u {
     right: 0;
 }
 
+.corner-image {
+    width: 500px; /* Установите ширину в зависимости от ваших требований */
+    height: auto; /* Сохраняет соотношение сторон */
+}
+
 .modal-body p {
     font-size: 1.1rem;
     text-align: justify;
