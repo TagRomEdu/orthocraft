@@ -363,7 +363,16 @@ h1 u {
     border-color: #138496;
 }
 
+/* CSS для адаптивности изображения */
 .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-container img {
     max-width: 100%;
-    overflow: hidden; /* Чтобы изображение не выходило за пределы контейнера */
+    height: auto;
+    display: block;
 }
