@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="modal-body text-start">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <img src="${product.image}" alt="${product.name}" class="img-fluid">
+                                        <img src="${product.image}" alt="static/image/logo2.jpg" class="img-fluid">
                                     </div>
                                     <div class="col-md-6">
                                         <p><strong>Цена:</strong> ${product.price.toFixed(2)} руб.</p>
@@ -96,9 +96,4 @@ navbar.addEventListener('mouseleave', () => {
     if (window.scrollY > 50) {
         navbar.style.transform = 'translateY(-100%)';
     }
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM fully loaded and parsed');
 });
