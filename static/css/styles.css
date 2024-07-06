@@ -358,3 +358,8 @@ h1 u {
     background-color: #138496; /* Темнее наводка */
     border-color: #138496;
 }
+
+.img-container {
+    max-width: 100%;
+    overflow: hidden; /* Чтобы изображение не выходило за пределы контейнера */
+}
