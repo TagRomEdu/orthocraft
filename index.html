@@ -76,51 +76,12 @@
         <div class="position-relative">
             <button class="btn btn-secondary scroll-button left-button" onclick="scrollLight()">‹</button>
             <div class="row flex-row flex-nowrap overflow-auto" id="product-row">
-                {% for product in products %}
-                    <div class="col-md-4 mb-4">
-                        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal{{ forloop.counter }}">
-                            <div class="product-image">
-                                <img src="{% static 'images/logo2.jpg' %}" alt="{{ product.name }}" class="img-fluid">
-                            </div>
-                            <div class="product-details p-3 text-center">
-                                <h4 class="product-name">{{ product.name }}</h4>
-                                <p class="product-price">Цена: {{ product.price }} руб.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- Модальное окно для товара -->
-                    <div class="modal fade" id="productModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="productModalLabel{{ forloop.counter }}" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="productModalLabel{{ forloop.counter }}">{{ product.name }}</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body text-start">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <img src="{% static 'images/logo2.jpg' %}" alt="{{ product.name }}" class="img-fluid">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p><strong>Цена:</strong> {{ product.price }} руб.</p>
-                                            {% if product.description != 'nan' %}
-                                            <p><strong>Описание:</strong> {{ product.description }}</p>
-                                            {% else %}
-                                            <p><strong>Описание:</strong> Материалы слишком ценны, чтобы их показывать всем подряд</p>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
             </div>
             <button class="btn btn-secondary scroll-button right-button" onclick="scrollRight()">›</button>
+        </div>
+        <!-- Модальные окна для товаров -->
+        <div id="modals-container">
+            <!-- Модальные окна будут загружены сюда с помощью JavaScript -->
         </div>
     </section>
 
@@ -417,5 +378,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="static/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/scripts.js"></script>
+    <script src="static/js/product_list.js"></script>
 </body>
 </html>
