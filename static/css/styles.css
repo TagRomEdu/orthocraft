@@ -377,6 +377,22 @@ h1 u {
     display: block;
 }
 
+.image-credit {
+    font-size: 0.875rem; /* Небольшой размер шрифта */
+    color: #666; /* Нейтральный цвет */
+    margin-top: 0.5rem; /* Отступ сверху */
+}
+
+.image-credit a {
+    color: #17a2b8; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.image-credit a:hover {
+    color: #138496; /* Цвет при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
 .delivery-option {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
