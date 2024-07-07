@@ -68,7 +68,7 @@
     {
         "id": 7,
         "name": "Тутор на г/с сустав СМО",
-        "description": "Кожаный башмачок ",
+        "description": "Кожаный башмачок",
         "price": 24500.00,
         "quantity": null,
         "category": null,
@@ -90,7 +90,7 @@
     {
         "id": 9,
         "name": "Аппарат на г/с сустав",
-        "description": "башмак- пластик, без шин",
+        "description": "башмак-пластик, без шин",
         "price": 60000.00,
         "quantity": null,
         "category": null,
@@ -123,7 +123,7 @@
     {
         "id": 12,
         "name": "Аппарат на г/с сустав",
-        "description": " башмак-кожа, шины простые",
+        "description": "башмак-кожа, шины простые",
         "price": 74200.00,
         "quantity": null,
         "category": null,
@@ -134,7 +134,7 @@
     {
         "id": 13,
         "name": "Аппарат на г/с сустав",
-        "description": " башмак-пластик, шины рег",
+        "description": "башмак-пластик, шины рег",
         "price": 97400.00,
         "quantity": null,
         "category": null,
@@ -145,7 +145,7 @@
     {
         "id": 14,
         "name": "Аппарат на г/с сустав",
-        "description": " башмак-кожа, шины рег",
+        "description": "башмак-кожа, шины рег",
         "price": 104700.00,
         "quantity": null,
         "category": null,
@@ -189,7 +189,7 @@
     {
         "id": 18,
         "name": "Аппарат на всю ногу",
-        "description": " коленные беззамковые",
+        "description": "коленные беззамковые",
         "price": 103300.00,
         "quantity": null,
         "category": null,
@@ -200,7 +200,7 @@
     {
         "id": 19,
         "name": "Аппарат на всю ногу",
-        "description": " коленные замковые",
+        "description": "коленные замковые",
         "price": 108100.00,
         "quantity": null,
         "category": null,
@@ -222,7 +222,7 @@
     {
         "id": 21,
         "name": "Аппарат на всю ногу",
-        "description": " Башмак пластик, коленные беззамковые",
+        "description": "Башмак пластик, коленные беззамковые",
         "price": 112400.00,
         "quantity": null,
         "category": null,
@@ -233,7 +233,7 @@
     {
         "id": 22,
         "name": "Аппарат на всю ногу",
-        "description": " Башмак кожа коленные  беззамковые ",
+        "description": "Башмак кожа коленные беззамковые",
         "price": 115900.00,
         "quantity": null,
         "category": null,
@@ -343,7 +343,7 @@
     {
         "id": 32,
         "name": "Аппарат на коленн. сустав",
-        "description": "nan",
+        "description": null,
         "price": 92500.00,
         "quantity": null,
         "category": null,
@@ -354,7 +354,7 @@
     {
         "id": 33,
         "name": "Корсет функц-корригир.",
-        "description": "nan",
+        "description": null,
         "price": 75900.00,
         "quantity": null,
         "category": null,
@@ -365,7 +365,7 @@
     {
         "id": 34,
         "name": "Корсет жесткой фиксации",
-        "description": "nan",
+        "description": null,
         "price": 41900.00,
         "quantity": null,
         "category": null,

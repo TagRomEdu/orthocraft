@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('static/goods.json')
         .then(response => response.json())
         .then(products => {
+            products.sort((a, b) => a.price - b.price);
+
             const productRow = document.getElementById('product-row');
             const modalsContainer = document.getElementById('modals-container');
 
@@ -64,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <p><strong>Цена:</strong> ${formatPrice(product.price.toFixed(2))} руб.</p>
                                         <p><strong>Описание:</strong></p>
                                         <p>${product.description}. Комплектация индивидуальная</p>
-                                        <p><strong>Гарантия: </strong>6 месяцев</p>
+                                        <p><strong>Гарантия:</strong> 6 месяцев</p>
                                         <!-- Добавьте другие детали продукта по вашему усмотрению -->
                                     </div>
                                 </div>
